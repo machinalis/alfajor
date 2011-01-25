@@ -21,7 +21,7 @@ class AgregarProductosACajaTest(TestCase):
 
     def test_simple_agregar_producto(self):
         """
-        Prueba que se puede agregar un alfajor a una caja de alfajores
+        I can add an alfajor to a alfajor box
         """
         caja = Caja.objects.create(tipo="Alfajor")
         alfajor = Producto.objects.filter(tipo="Alfajor")[0]
@@ -33,8 +33,7 @@ class AgregarProductosACajaTest(TestCase):
 
     def test_agregar_distintos_tipos_lanza_excepcion(self):
         """
-        Prueba que si se agregan bombones a una caja de alfajores se
-        lanza una excepción, en particular ValueError
+        If I add a chocolate to an alfajor box, then ValueError is thrown
         """
         caja = Caja.objects.create(tipo="Alfajor")
         alfajor = Producto.objects.filter(tipo="Alfajor")[0]
@@ -104,7 +103,7 @@ class ValidacionTest(TestCase):
 
     def test_crear_cajas_crea_instancias_de_box(self):
         """
-        No guardamos cajas en la base de datos, creamos instancias de 'Box'
+        No boxes into the db but instances of 'Box'
         """
         
         bt = BoxTransmogrifier()
@@ -113,7 +112,7 @@ class ValidacionTest(TestCase):
             
             lista_de_cajas = bt.crear_lista_de_cajas_apartir_de_lista_str(cajas)
 
-            # Tiene que ser instancias de caja
+            # Has to be box instance
             self.assert_(all([isinstance(b, Box) for b in lista_de_cajas]))
 
     def test_crear_pedido(self):
@@ -134,18 +133,13 @@ class ValidacionTest(TestCase):
             
             sk = lambda obj : obj.pk
 
-            # Hay que tener en cuenta que el orden puede ser distinto
-            # entonces las vamos a comparar primero viendo si el tamaño
-            # de todas las cajas es igual...
-
+            # Take into account that the order can be different, so we
+            # compare size of boxes first
             _len = lambda obj : obj.total_de_productos()
             self.assertEqual(sorted(map(_len, lista_de_cajas)),
                              sorted(map(_len, pedido.cajas.all())))
 
-            # Ahora vamos a comparar que todos los elementos de todas las
-            # cajas (un flatten) es decir vemos que en total hay en
-            # cada caja hay la misma cantidad y que además la lista
-            # entera de productos son iguales.
+            # Now we compare that every item of the box (flatten)
             elems0 = sorted((elem
                              for box in lista_de_cajas
                              for elem in box), key=sk)
@@ -184,7 +178,7 @@ class FormTests(TestCase):
 
     def test_simple_invalid_form(self):
         """
-        El formulario debería ser invalido porque el telefono contiene letras
+        Form should not be valid, as it contains a letter
         """
         invalid_data = dict(self._data, telefono='4444a444')
         f = DatosDeEnvioForm(invalid_data)
@@ -193,7 +187,7 @@ class FormTests(TestCase):
 
     def test_simple_invalid_form(self):
         """
-        El formulario debería ser invalido porque el telefono contiene letras
+        Form should not be valid, as it contains a letter
         """
         invalid_data = dict(self._data, codigo_de_area='a11')
         f = DatosDeEnvioForm(invalid_data)

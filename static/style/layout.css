@@ -1,6 +1,6 @@
 *{ padding: 0; margin: 0; }
 
-/* RESET DE LOS ESTILOS */
+/* Style reset */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
 body{ line-height: 1; color: black; background: white; }
 ol, ul{ list-style: none; }
@@ -72,7 +72,7 @@ div#panePrice strong{ padding: 0 5px; display: inline; font-size: 2em; vertical-
 
 button{ float: right; width: 130px; height: 30px; background: url(/static/img/boton2.gif) no-repeat; text-align: center; border: 0; font-size: 1.1em; margin: 15px 10px 0 0; }
 
-/* solicitud de datos */
+/* data retrieval */
 div#paneDatos{ width: 550px; float: left; color: #B8A486; }
 
 div#paneInfo{ width: 300px; float: right; }
@@ -96,7 +96,7 @@ div#paneDatos ul#resumen li.total{ border-top: 2px solid #B8A486; color: #FFF; f
 div#paneInfo p{ -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; background: url(/static/img/cart.jpg); padding: 10px; margin-top: 30px; }
 /* ****************** */
 
-/* confirmacion de datos */
+/* data confirm */
 div#paneDatos div#listaCajas{ float: left; width: 250px; padding: 0 10px; }
 div#paneDatos div#listaDatos{ float: right; width: 230px; padding: 0 10px; }
 
@@ -110,7 +110,7 @@ div#paneDatos div#listaDatos div#precioFinal{ color: #2C1800; -moz-border-radius
 div#paneDatos div#listaDatos div#precioFinal b{ color: #2C1800; font-size: 1.6em; font-weight: normal; }
 /* ********************* */
 
-/* gracias */
+/* thanks page */
 div#msgGracias{ color: #DFD0B3; }
 div#msgGracias h1{ display: block; text-align: center; }
 div#msgGracias p{ display: block; text-align: center; margin: 30px 0 20px 0; }

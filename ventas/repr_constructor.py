@@ -49,9 +49,7 @@ class BoxTransmogrifier(object):
     """
     http://bit.ly/dEhVXv
 
-    Su función es basicamente validar los datos antes de que entren
-    en la base de datos. No sé donde podría ir esto, me parecio que
-    acá estaba bien.
+    Validates data before entering into the database.
     """
 
     def __init__(self):
@@ -61,15 +59,14 @@ class BoxTransmogrifier(object):
 
     def _string_a_lista_de_productos(self, s):
         """
-        s es de la forma u'7,7,7,7,7,7,' donde los números representan
-        un id de un producto
+        s looks like u'7,7,7,7,7,7,' where each number is a product id
         """
         return [Producto.objects.get(pk=int(pk))
                 for pk in s.strip(" ,").split(",")]
 
     def _lista_de_productos_es_una_caja(self, lp):
         """
-        determina si la lista de productos es una caja
+        Is lp a valid Box?
         """
         num_prods = len(lp)
         if num_prods != 6 and num_prods != 12:
@@ -83,15 +80,15 @@ class BoxTransmogrifier(object):
 
     def crear_lista_de_cajas_apartir_de_lista_str(self, ls):
         """
-        Acá cajas, no es una instancia de Caja(models.Model) si no
-        es una lista de productos que representa una Caja valida
-        Esto es lo que viene en los datos del post:
+        Boxes here are not an instance of Caja(models.Model) but
+        a product list that represents a valid Box.
+        From the post, we have:
         [
           u'7,7,7,7,7,7,',
           u'7,7,7,7,7,7,',
           u'17,17,17,17,17,17,17,17,17,17,17,17,'
          ]
-        Esta función transforma lo de arriba en:
+        This function turns that into:
         [
          [Producto(pk=7), Producto(pk=7) ...],
          ...
@@ -137,15 +134,15 @@ class BoxTransmogrifier(object):
 
     def crear_pedido(self, instance=None):
         """
-        Toma una lista de cajas, es decir una lista de Box que
-        representa una futura instancia de Caja(models.Model) y
-        devuelve un pedido Pedido(models.Model) con sus cajas
+        Take a box list, this is a list of Box that represents a 
+        future instance of Caja(models.Model) and returns a request
+        Pedido(models.Model) with its boxes
 
-        Si no se seteo previamente los atributos datos_de_envio y
-        gastos_de_envio con los objectos correspondientes (DatosDeEnvio() y
-        GastosDeEnvio() respectivamente) la función lanzara AttributeError
+        If datos_de_envio and gastos_de_envio are not set with
+        DatosDeEnvio() and GastosDeEnvio(), the function will
+        throw AttributeError
 
-        Crea una instancia si no se le pasa una mediante el 'instance'
+        Creates an instance if it's not passed via 'instance'
         """
 
         if not (self.datos_de_envio and self.gastos_de_envio):

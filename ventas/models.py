@@ -7,7 +7,6 @@ from django.contrib.localflavor.ar import ar_provinces
 
 ARP = dict(ar_provinces.PROVINCE_CHOICES)
 
-# Create your models here.
 class Producto(models.Model):
     CHOICES = (('Alfajor', 'Alfajor'),
                ('Bombon', 'Bombon'),)
@@ -44,8 +43,8 @@ class Producto(models.Model):
 
 class Item(models.Model):
     """
-    Representa una asociación entre Producto y Caja, agrega
-    información sobre la cantidad de elementos que van en la caja.
+    Asociation between Product and Box, adds information about the
+    amount for the Box
     """
     caja = models.ForeignKey('Caja')
     producto = models.ForeignKey(Producto)
@@ -90,7 +89,7 @@ class Caja(models.Model):
 
 class GastosDeEnvio(models.Model):
     """
-    Tabla de gastos de envio.
+    Shipping costs table
     """
 
     precio = models.DecimalField(decimal_places=2, max_digits=5)
@@ -112,7 +111,7 @@ class GastosDeEnvio(models.Model):
 
 class DatosDeEnvio(models.Model):
     """
-    Datos del envío.
+    Shipping costs
     """
     nombre_completo = models.CharField(max_length=256)
     email = models.EmailField()

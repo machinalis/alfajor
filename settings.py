@@ -99,7 +99,7 @@ INSTALLED_APPS = (
     'ventas',
 )
 
-EMAIL_ADDR_ALFAJOR = "to@site.com"
+EMAIL_ADDR_ALFAJOR = "to@example.com"
 
 try:
     from local_settings import *

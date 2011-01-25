@@ -22,9 +22,8 @@ class GastosDeEnvioSelect(forms.Select):
 
     def __init__(self, gastos_de_envio, attrs=None, choices=None):
         """
-            Se supone que gatos de envio es un queryset de models.GastosDeEnvio.
-            También se supone que las provincias se están guardando con el
-            select de provincias
+            Shipping costs is a queryset from models.GastosDeEnvio.
+            Assuming that provinces are being saved with province select
         """
         choices_of_prov = [(p.provincia, ARP.get(p.provincia))
                            for p in gastos_de_envio]

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	//$("#app").slideToggle();
         if (toggle_cajas) {
-          // si hay cajas por la session, hacer que se puedan borrar
+          // if boxes presents for the session, then make it deletable
           $("#paneCartB a").unbind().click(function(){
 	        tag=$(this).parent().parent().children(".inactivo:first");
 		if(tag.is("li")){

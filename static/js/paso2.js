@@ -26,8 +26,7 @@ function costo_de_envio(){
   }
 }
 
-// ToDo: cambiar esto para que haga un solo pedido para todas las
-// localidades en vez de hacer uno a la vez.
+// ToDo: chenge this to make just one order for all the cities
 function _costo_de_envio(prov_arg, loc_arg) {
   if (loc_arg === "NA" || loc_arg === "") {
     loc_arg = null;
@@ -41,7 +40,7 @@ function _costo_de_envio(prov_arg, loc_arg) {
       var c = $("#id_costo_de_envio * span.val").first();
       c.empty();
       c.append(Number(res).toFixed(2).toString());
-      _costo_total(); // esto está acá por lo async de javascript
+      _costo_total(); // this is present because of JS async
     }
   });
 }
@@ -69,7 +68,7 @@ function organizar_selects(res) {
 
   var localidad = "";
 
-  // declaro algunas variables locales
+  // some local variables
   var elem = null;
   var p = null;
   var loc_elem = null;
@@ -77,9 +76,9 @@ function organizar_selects(res) {
 
   if ($("select#id_localidad").length === 0 &&
       res.length > 1) {
-    // no es un select, entonces cambiar a un select
-    // Si res.length === 2 es porque están solamente las opciones "NA" y "Otra"
-    // Si pasa eso mejor dejamos el input como está.
+    // if it's not a select, then change to it
+    // if res.length === 2 is because "NA" and "other" options are available
+    // if that's the case, then we leave the input as is
 
     // sacar el input.
     elem = $("input#id_localidad");
@@ -90,30 +89,29 @@ function organizar_selects(res) {
 
     loc_elem = $("select#id_localidad");
     loc_elem.empty();
-    // Agrega opciones al select de localidad
+    // Add options to the city select
     for (var elem in res) {
       loc_elem.append('<option value="' + res[elem][0] +  '">' +
                       res[elem][1] + '</option>');
     }
-    // re ligar a envento change
+    // re bind change event
     loc_elem.change(costo_de_envio);
-    // ver cual es la primera localidad
+    // see which is the first city
     localidad = $("#id_localidad > option").first().val();
   } else if ($("select#id_localidad").length > 0 &&
              res.length > 1) {
-    // ya es un select y hay más de dos opciones
+    // already a select, and more than 2 options
     loc_elem = $("select#id_localidad");
     loc_elem.empty();
 
-    // Agrega opciones al select de localidad
+    // Add options to city select
     for (var elem in res) {
       loc_elem.append('<option value="' + res[elem][0] +  '">' +
                       res[elem][1] + '</option>');
     }
   } else if ($("input#id_localidad").length > 0 &&
              res.length === 1) {
-    // se queda todo como está, la localidad, para buscar
-    // el costo es vacio (hereda costo de provincia)
+    // leaves without changes. City inherits province cost if empty
     localidad = "";
   } else if ($("select#id_localidad").length > 0 &&
              res.length === 1) {
@@ -128,7 +126,7 @@ function organizar_selects(res) {
                       + 'id="id_localidad"/>');
     localidad = "";
   }
-  // busca el costo de enviar algo a la primera localidad
+  // look for the cost to send to the first city
   _costo_de_envio(prov, localidad);
   _costo_total();
 }

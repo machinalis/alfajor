@@ -1,4 +1,3 @@
-# Create your views here.
 # -*- coding: utf-8 -*-
 from datetime import datetime
 
@@ -42,15 +41,13 @@ def ajax_calcular_costo_de_envio(request):
     provincia = request.GET.get("provincia")
     localidad = request.GET.get("localidad", "")
 
-    # No supe como resolver mandar el string vacio :-/
-    # Así que si ven en el javascript si el string es vacio
-    # mando "null"
+    # To handle empty strings, I will send "null"
     if localidad and localidad.strip() == "null":
         localidad = ""
 
     try:
-        # Si localidad == "" entonces debería dar el costo de la provincia
-        # es decir, localidad tienen blank=True
+        # If localidad == "" then I will return the province cost,
+        # so localidad has blank=True
         gastos_de_envio = GastosDeEnvio.objects.get(localidad=localidad,
                                                     provincia=provincia)
     except GastosDeEnvio.DoesNotExist:
@@ -63,7 +60,7 @@ def ajax_calcular_costo_de_envio(request):
     return response
 
 def pedido(request):
-    # Construir contexto para el primer template
+    # Context for the first template
 
     alfajores = Producto.objects.filter(tipo="Alfajor")
     bombones = Producto.objects.filter(tipo="Bombon")
@@ -85,23 +82,21 @@ def pedido(request):
         cajas = [s for s in request.POST.getlist('cajas[]') if s]
         
 
-        # Objeto para validad las cajas
+        # Object to validate boxes
         bt = BoxTransmogrifier()
 
         try:
-            # antes de crear algo en la db, validar. Si cajas == "", también
-            # lanza ValueError, además de si no son cajas validas.
+            # before creating an object into the db, validate.
+            # If cajas == "", also throw ValueError
             lista_de_cajas = bt.crear_lista_de_cajas_apartir_de_lista_str(cajas)
 
         except ValueError, e:
-            # si da error no hay pedido
+            # if error, no order
             pedido = None
         else:
-            # pedido = request.session.get(SESSION_PEDIDO_KEY, None)
-            # if not pedido:
             pedido = bt
 
-        # si hay pedido pasar al siguiente paso
+        # if there is an order, go to next step
         if pedido:
             request.session[SESSION_PEDIDO_KEY] = pedido
             return HttpResponseRedirect(reverse('datos-de-envio'))
@@ -110,7 +105,7 @@ def pedido(request):
 
 def datos_de_envio(request):
 
-    # en realidad es una instancia de BoxTransmogrifier
+    # instance of BoxTransmogrifier
     pedido = request.session.get(SESSION_PEDIDO_KEY, None)
     if not pedido:
         return HttpResponseRedirect(reverse('pedido'))
@@ -128,8 +123,8 @@ def datos_de_envio(request):
             form = DatosDeEnvioForm(request.POST)
 
         if form.is_valid():
-            # no guardemos el objeto hasta que se haya completado
-            # la transaccion
+            # We don't save the object until we have completed the
+            # transaction
             datos_de_envio = form.save(commit=False)
 
             try:
@@ -155,20 +150,20 @@ def datos_de_envio(request):
 
 def confirmacion(request):
 
-    # en realidad es una instancia de BoxTransmogrifier
+    # instance of BoxTransmogrifier
     pedido = request.session.get(SESSION_PEDIDO_KEY, None)
 
     if not pedido:
         return HttpResponseRedirect(reverse('pedido'))
 
     if request.method == 'POST':
-        # esto si es una instancia de Pedido
+        # Pedido instance
         pedido_inst = pedido.crear_pedido()
 
         cajas = u'\n'.join((unicode(caja) for caja in pedido_inst.cajas.all()))
         datos_de_envio = pedido_inst.datos_de_envio
 
-        # Mensaje para el nazareno
+        # Message for owner
         body = (u"Pedido Número: %d\nA: %s\n"
                 u"Productos:\n %s\nCosto de los Productos:%.2f\n"
                 u"Costo del Envio:%.2f") % (pedido_inst.pk,
@@ -182,7 +177,7 @@ def confirmacion(request):
 
         elnaza_msg = EmailMessage(subject, body, sender, (recipients,))
 
-        # Mensaje para el cliente
+        # Message for customer
         client_msg_body = (u"Gracias por realizar su pedido de Alfajores"
                            u" El Nazareno.\n\nEl detalle del pedido es el"
                            u" siguiente:\n%s\n\nEl pedido se enviará a la"

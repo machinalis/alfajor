@@ -13,9 +13,4 @@ urlpatterns = patterns('ventas.views',
         name='localidades-por-provincia'),
     url(r'^ajax/costo-de-envio/$', 'ajax_calcular_costo_de_envio',
         name='costo-de-envio'),
-
-    # url(r'^ajax/validar-cajas/$', 'ajax_validar_cajas',
-    #     name='validar-cajas'),
-    # url(r'^ajax/todos-los-productos/$', 'ajax_buscar_todos_los_productos',
-    #     name='todos-los-productos'),
 )
