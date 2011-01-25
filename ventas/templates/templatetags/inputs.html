@@ -1,0 +1,14 @@
+<input type="hidden" id="siguienteCaja" value="{{ siguiente_caja }}" />
+{% for t, caja in vals %} 
+<input type="hidden" name="cajas[]" class="cajas" 
+       caja="{{ forloop.counter }}" 
+       tipo="{{ t }}" 
+       value="{{ caja }}" 
+       {% if forloop.first %}
+       activa="1" 
+       {% else %}
+       activa=""
+       {% endif %}
+       />
+{% endfor %}
+

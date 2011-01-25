@@ -1,0 +1,51 @@
+<div id="paneCartA">
+  <ul>
+    {% for caja in pedido.cajas.all %}
+    <li>
+      {% if forloop.first %}
+      <a href="#" class="selected" caja="{{ forloop.counter }}">
+      {% else %}
+      <a href="#" caja="{{ forloop.counter }}">
+      {% endif %}
+        Caja #{{ forloop.counter }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="paneCartB">
+
+  {% for caja, idx in lista_de_productos %}
+
+  {% if forloop.first %}
+  <ul id="detalleCaja_{{ forloop.counter }}" style="display: block;">
+  {% else %}
+  <ul id="detalleCaja_{{ forloop.counter }}" style="display: none;">
+  {% endif %}
+
+    {% for item in caja %}
+    <li class="idR{{ item.pk }}" 
+        itemid="{{ item.pk }}" 
+        itemprecio="{{ item.precio_por_unidad }}">
+      <a href="#">x</a>
+      <p> {{ item.variedad|capfirst }}</p>
+    </li>
+
+    {% if forloop.last %}
+    {% ifequal forloop.counter 6 %}
+    {% if forloop.parentloop.last %}
+    <li class="inactivo"></li>
+    <li class="inactivo"></li>
+    <li class="inactivo"></li>
+    <li class="inactivo"></li>
+    <li class="inactivo"></li>
+    <li class="inactivo"></li>
+    {% endif %}
+    {% endifequal %}
+    {% endif %}
+    {% endfor %}    
+    <div class="clear"></div>
+  </ul>
+  {% endfor %}
+</div>

@@ -1,0 +1,110 @@
+[
+    {
+        "pk": 1, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "", 
+            "provincia": "B", 
+            "precio": "45.6"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "", 
+            "provincia": "K", 
+            "precio": "50"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "", 
+            "provincia": "H", 
+            "precio": "35.5"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "", 
+            "provincia": "U", 
+            "precio": "50"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "", 
+            "provincia": "C", 
+            "precio": "500.4"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "", 
+            "provincia": "X", 
+            "precio": "37"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "", 
+            "provincia": "W", 
+            "precio": "5.5"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "La Plata", 
+            "provincia": "B", 
+            "precio": "45.5"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "Quilmes", 
+            "provincia": "B", 
+            "precio": "25.5"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "Ituizango", 
+            "provincia": "B", 
+            "precio": "45.7"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "C\u00f3rdoba", 
+            "provincia": "X", 
+            "precio": "45.5"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ventas.gastosdeenvio", 
+        "fields": {
+            "localidad": "Valle Hermoso", 
+            "provincia": "X", 
+            "precio": "45.5"
+        }
+    }
+]

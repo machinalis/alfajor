@@ -1,0 +1,120 @@
+*{ padding: 0; margin: 0; }
+
+/* RESET DE LOS ESTILOS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+body{ line-height: 1; color: black; background: white; }
+ol, ul{ list-style: none; }
+table{ border-collapse: separate; border-spacing: 0; }
+caption, th, td{ text-align: left; font-weight: normal; }
+strong { font-weight:bold; }
+em { font-style: italic; }
+
+div.clear{ clear: both; }
+div.espacio{ clear: both; height: 10px; }
+div.espacioMediano{ clear: both; height: 20px; }
+/* ************************ */
+
+body{ padding: 0; margin: 0; font-size: 14px; font-family: Helvetica; color: #311C00; line-height: 20px; background: url(/static/img/fondo.gif) #311C00; }
+
+div#header{ width: 860px; margin: auto; padding: 25px 45px 25px 45px; }
+div#header a#logo{ float: left; width: 301px; height: 91px; text-indent: -9999px; background: url(/static/img/logo.gif) no-repeat; }
+div#header img{ float: right; margin-top: 60px; }
+
+div#body{ width: 900px; margin: auto; padding: 25px; background: url(/static/img/body.jpg) no-repeat top; }
+
+div#app{ /* display: none; */ }
+
+a{ color: #5D340D; }
+a.boton{ display: inline; color: #DCCFB8; text-decoration: none; padding: 5px; margin-right: 5px; font-size: 0.9em; text-align: center; background: url(/static/img/boton.gif) no-repeat; }
+
+div#info{ margin-bottom: 25px; padding: 15px; background: url(/static/img/info.jpg) no-repeat #DCCFB8; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; -moz-box-shadow: 1px 1px 10px #000; -webkit-box-shadow: 1px 1px 10px #000; box-shadow: 1px 1px 10px #000; }
+div#info div#paneA{ float: left; width: 330px; }
+div#info div#paneB{ float: right; width: 500px; }
+
+strong{ font-size: 1.3em; display: block; }
+h1{ font-size: 1.4em; font-weight: bold; margin-bottom: 7px; }
+
+div#info a.solapa{ float: left; border: 1px solid #C6B69C; padding: 2px 10px; text-decoration: none; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0; }
+div#info a.seleccionada{ font-weight: bold; background: #5D330C; color: #C5B69A; border: 1px solid #5D330C; }
+
+div#info ul{ border: 1px solid #5D330C; padding: 10px; background: #DCCFB8; }
+div#info ul li{ background: url(/static/img/punto1.gif) no-repeat 0 3px; padding: 1px 0 1px 14px; font-size: 1.15em; letter-spacing: 0.2px; }
+
+div#info img{ border: 1px solid #311C00; float: left; margin-right: 10px; }
+div#info p{ font-size: 0.9em; }
+
+div#info div#precioItem{ padding-top: 20px; text-align: right; }
+div#info div#precioItem strong{ display: inline; font-size: 1.4em; }
+
+div#info div#agregarItem{ text-align: right; padding: 40px 0 0 0; }
+
+div#text{ float: left; width: 300px; padding: 10px; color: #DCCFB8; }
+div#text a{ color: #FC0; }
+
+div#cart{ float: right; width: 503px; padding: 15px; background: url(/static/img/cart.jpg) repeat-x top #DCCFB8; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; -moz-box-shadow: 1px 1px 10px #000; -webkit-box-shadow: 1px 1px 10px #000; box-shadow: 1px 1px 10px #000; }
+div#cart div.opA{ float: left; width: 170px; }
+div#cart div.opB{ float: right; width: 320px; text-align: right; }
+
+div#cart div#paneCartA{ float: left; width: 90px; border-top: 1px solid #311C00; }
+div#cart div#paneCartA ul{ margin: 0; }
+div#cart div#paneCartA ul li a{ padding: 1px 3px; display: block; }
+div#cart div#paneCartA ul li a.selected{ background: #5D330C; color: #C5B69A; text-decoration: none; }
+
+div#cart div#paneCartB{ float: left; width: 410px; border-left: 1px solid #311C00; border-top: 1px solid #311C00; }
+div#cart div#paneCartB ul li{ float: left; width: 135px; height: 115px; background: url(/static/img/disponible.png) no-repeat center center; border-right: 1px solid #94846F; border-bottom: 1px solid #94846F; }
+div#cart div#paneCartB ul li.inactivo{ background: url(/static/img/inactivo.png); }
+div#cart div#paneCartB ul li a{ float: right; background: url(/static/img/x.gif) no-repeat; width: 16px; height: 16px; text-decoration: none; text-indent: -9999px; }
+div#cart div#paneCartB ul li p{ clear: both; padding: 65px 5px 0 5px; font-size: 0.9em; line-height: 16px; text-align: center; }
+
+div#panePrice{ text-align: right; margin-top: 10px; }
+
+div#panePrice strong{ padding: 0 5px; display: inline; font-size: 2em; vertical-align: bottom; font-weight: normal; }
+
+button{ float: right; width: 130px; height: 30px; background: url(/static/img/boton2.gif) no-repeat; text-align: center; border: 0; font-size: 1.1em; margin: 15px 10px 0 0; }
+
+/* solicitud de datos */
+div#paneDatos{ width: 550px; float: left; color: #B8A486; }
+
+div#paneInfo{ width: 300px; float: right; }
+
+div#paneDatos form{ padding: 30px 20px 20px 20px; }
+div#paneDatos form label{ float: left; width: 150px; padding: 4px; }
+div#paneDatos form label.chico{ width: auto; margin-left: 10px; }
+div#paneDatos form input{ float: left; width: 300px; padding: 3px; font-size: 1.1em; }
+div#paneDatos form input#localidad{ width: 180px; }
+div#paneDatos form input#cp{ width: 70px; }
+div#paneDatos form select{ float: left; width: 300px; padding: 3px; font-size: 1.2em; }
+
+div#paneDatos ul.errorlist{ margin-left: 160px; }
+div#paneDatos ul.errorlist li{ background: url(/static/img/error.gif) no-repeat 0 2px; padding-left: 19px; }
+
+div#paneDatos ul#resumen{ float: right; width: 200px; margin: 40px 40px 0 0; }
+div#paneDatos ul#resumen li{ padding: 3px; }
+div#paneDatos ul#resumen li b{ float: right; width: 80px; font-size: 1.2em; text-align: right; }
+div#paneDatos ul#resumen li.total{ border-top: 2px solid #B8A486; color: #FFF; font-size: 1.2em; }
+
+div#paneInfo p{ -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; background: url(/static/img/cart.jpg); padding: 10px; margin-top: 30px; }
+/* ****************** */
+
+/* confirmacion de datos */
+div#paneDatos div#listaCajas{ float: left; width: 250px; padding: 0 10px; }
+div#paneDatos div#listaDatos{ float: right; width: 230px; padding: 0 10px; }
+
+div#paneDatos div#listaCajas ul li{ padding: 10px 0 0 23px; background: url(/static/img/caja.gif) no-repeat 0 14px; font-size: 1.1em; }
+div#paneDatos div#listaCajas ul li ul li{ padding: 0 0 0 14px; background: url(/static/img/punto2.gif) no-repeat 0 2px; font-size: 1em; }
+
+div#paneDatos div#listaDatos p{ margin-bottom: 5px; }
+div#paneDatos div#listaDatos b{ color: #DFD0B3; }
+
+div#paneDatos div#listaDatos div#precioFinal{ color: #2C1800; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; display: block; margin-top: 30px; padding: 10px; background: url(/static/img/cart.jpg); text-align: center; }
+div#paneDatos div#listaDatos div#precioFinal b{ color: #2C1800; font-size: 1.6em; font-weight: normal; }
+/* ********************* */
+
+/* gracias */
+div#msgGracias{ color: #DFD0B3; }
+div#msgGracias h1{ display: block; text-align: center; }
+div#msgGracias p{ display: block; text-align: center; margin: 30px 0 20px 0; }
+div#msgGracias div.espacioMediano{ height: 100px; }
+/* ********************* */
+
+div#footer{ width: 900px; margin: auto; padding: 25px; text-align: center; color: #DCCFB8; font-size: 0.8em; }
