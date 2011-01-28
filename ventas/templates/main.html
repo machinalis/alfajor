@@ -19,9 +19,14 @@
     <script type="text/javascript" src="/static/js/jquery-1.4.3.min.js"></script>
     <script type="text/javascript" src="/static/js/app.js"></script>
     <script type="text/javascript">
+      {% if init_prod %}
       var itemParaAgregar = {{ init_prod.pk }};
+      var last_choice_id = "{{ init_prod.pk }}";
+      {% else %}
+      var itemParaAgregar = null;
+      var last_choice_id = null;
+      {% endif %}
       var toggle_cajas = {% if pedido %}true{% else %}false{% endif %};
-      var last_choice_id = "{{ init_prod.pk }}"
     </script>
     
     <!--[if lt IE 7.]>
@@ -44,6 +49,7 @@
                class="solapa">Bombones y trufas</a>
 	    <div class="clear"></div>
 	    <ul id="t0">
+              {% if alfajores %}
               {% for alfajor in alfajores %}
               {% if alfajor.disponible %}
               <li>
@@ -58,8 +64,14 @@
               </li>
               {% endif %}
               {% endfor %}
+              {% else %}
+              <li> No hay datos, deberá cargar el fixture para 
+                   obtener un menú aquí
+              </li>
+              {% endif %}
 	    </ul>
 	    <ul id="t1" style="display:none">
+              {% if bombones %}
               {% for bombon in bombones %}
               {% if bombon.disponible %}
               <li> 
@@ -69,15 +81,31 @@
               </li>
               {% endif %}
               {% endfor %}
+              {% else %}
+              <li> No hay datos, deberá cargar el fixture para 
+                   obtener un menú aquí
+              </li>
+              {% endif %}
+
+
 	    </ul>
 	  </div>
 	  <div id="paneB">
+            {% if init_prod %}
 	    <h1>{{ init_prod.variedad|capfirst }}</h1>
 	    <img src="{{ init_prod.imagen.url }}" />
 	    <p>{{ init_prod.descripcion }}</p>
 	    <div id="precioItem">Precio p/ unidad: $ 
               <strong>{{ init_prod.get_precio_con_fmt }}</strong>
             </div>
+            {% else %}
+	    <h1>No hay alfajores cargados</h1>
+	    <img src="/static/img/stub.png" />
+	    <p> No hay alfajores en la base de datos.</p>
+	    <div id="precioItem">Precio p/ unidad: $ 
+              <strong> 0.00 </strong>
+            </div>
+            {% endif %}
 	    <div class="clear"></div>
 	    
 	    <div id="agregarItem">

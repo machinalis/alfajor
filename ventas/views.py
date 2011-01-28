@@ -64,8 +64,14 @@ def pedido(request):
 
     alfajores = Producto.objects.filter(tipo="Alfajor")
     bombones = Producto.objects.filter(tipo="Bombon")
-    alfajor = Producto.objects.filter(tipo="Alfajor",
-                                      disponible=True).order_by('?')[0]
+
+    alfajores_disp = Producto.objects.filter(tipo="Alfajor",
+                                             disponible=True).order_by('?')
+
+    if alfajores_disp:
+        alfajor = alfajores_disp[0]
+    else:
+        alfajor = None
 
     c = { 'date' : datetime.now(),
           'alfajores' : alfajores,
