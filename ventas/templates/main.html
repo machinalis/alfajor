@@ -3,7 +3,7 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title>Alfajores El Nazareno</title>
+    <title>Alfajor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
     <link rel="stylesheet" href="/static/style/layout.css" type="text/css" />
@@ -35,7 +35,7 @@
   </head>
   <body>
     <div id="header">
-      <a id="logo" href="{% url ventas.views.pedido %}">El Nazareno</a>
+      <a id="logo" href="{% url ventas.views.pedido %}">Alfajor</a>
       <img src="/static/img/paso1.gif" />
       <div class="clear"></div>
     </div>
@@ -44,9 +44,9 @@
 	<div id="info">
 	  <div id="paneA">
 	    <a href="#" id="selAlfajores" 
-               class="solapa seleccionada">Alfajores</a>
+               class="solapa seleccionada">Alfajor</a>
             <a href="#" id="selBombones" 
-               class="solapa">Bombones y trufas</a>
+               class="solapa">Chocolate</a>
 	    <div class="clear"></div>
 	    <ul id="t0">
               {% if alfajores %}
@@ -65,8 +65,8 @@
               {% endif %}
               {% endfor %}
               {% else %}
-              <li> No hay datos, deberá cargar el fixture para 
-                   obtener un menú aquí
+              <li> No alfajor available. You may want to add some data
+              through admin panel or fixtures.
               </li>
               {% endif %}
 	    </ul>
@@ -82,8 +82,8 @@
               {% endif %}
               {% endfor %}
               {% else %}
-              <li> No hay datos, deberá cargar el fixture para 
-                   obtener un menú aquí
+              <li> No alfajor available. You may want to add some data
+              through admin panel or fixtures.
               </li>
               {% endif %}
 
@@ -95,14 +95,15 @@
 	    <h1>{{ init_prod.variedad|capfirst }}</h1>
 	    <img src="{{ init_prod.imagen.url }}" />
 	    <p>{{ init_prod.descripcion }}</p>
-	    <div id="precioItem">Precio p/ unidad: $ 
+	    <div id="precioItem">Each one: $ 
               <strong>{{ init_prod.get_precio_con_fmt }}</strong>
             </div>
             {% else %}
-	    <h1>No hay alfajores cargados</h1>
+	    <h1>No alfajor available</h1>
 	    <img src="/static/img/stub.png" />
-	    <p> No hay alfajores en la base de datos.</p>
-	    <div id="precioItem">Precio p/ unidad: $ 
+	    <p> You may want to add some data
+              through admin panel or fixtures. </p>
+	    <div id="precioItem">Each one: $ 
               <strong> 0.00 </strong>
             </div>
             {% endif %}
@@ -113,12 +114,12 @@
                      value="" 
                      precio="{{ init_prod.precio_por_unidad }}" 
                      tipo="{{ init_prod.tipo }}" />
-	      Agreg&aacute; a la caja:
+	      Add to current box:
 	      <a class="boton" href="javascript:agregarItems(1)">1</a>
 	      <a class="boton" href="javascript:agregarItems(4)">4</a>
 	      <a class="boton" href="javascript:agregarItems(6)">6</a>
 	      <a class="boton" href="javascript:agregarItems(12)">12</a>
-	      &oacute; 
+	      or
               <select id="selectCant">
                 <option value="0"></option>
                 <option value="1">1</option>
@@ -151,38 +152,36 @@
           {% endif %}
 
 	  <div id="text">
-            <p>Con recetas propias desarrolladas a través de cuatro décadas de duro
-              trabajo, y con las mejores materias primas 100% naturales, les
-              llevamos a ustedes desde las Sierras de Córdoba y a cualquier punto
-              del país, nuestros productos, con la misma frescura y calidad que si
-              los comprara en nuestros locales.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Quisque porta felis a ante ullamcorper sit amet accumsan 
+            enim commodo. Sed sit amet ligula augue, at cursus erat. Sed 
+            sollicitudin adipiscing urna ut dignissim. In fermentum 
+            ornare risus, non posuere ante volutpat at.
             </p>
-            <p>
-              A continuación, arme sus cajas de alfajores o bombones a gusto, que le
-              será enviado a su domicilio. Las cajas deben contener 6 o 12 unidades,
-              y deben ser exclusivamente de alfajores o de bombones. Para pedidos
-              especiales, comuníquese con nosotros a 
-              <a href="mailto:to@example.com">
-                to@example.com
-              </a>
+            <p>Aliquam et risus sed metus semper pharetra. Morbi eget 
+            leo semper nisi lobortis consectetur. Suspendisse non diam 
+            condimentum velit sollicitudin ultricies. Phasellus 
+            elementum porttitor felis, vel hendrerit metus adipiscing 
+            id. Aliquam iaculis risus justo, quis auctor purus, 
+            <a href="mailto:to@example.com">to@example.com</a>.
              </p>
 	  </div>
 	  <div id="cart">
-	    <strong>Tu compra</strong>
+	    <strong>Your order</strong>
 	    <div class="espacio"></div>
 	    <div class="opA">
-              <a href="#" class="boton" id="accNuevaCaja">Nueva caja</a>
+              <a href="#" class="boton" id="accNuevaCaja">New box</a>
             </div>
 	    <div class="opB">
-              <a href="#" class="boton" id="accDuplicaCaja">Duplicar caja</a>
-              <a href="#" class="boton" id="accBorraCaja">Borrar caja</a>
+              <a href="#" class="boton" id="accDuplicaCaja">Duplicate box</a>
+              <a href="#" class="boton" id="accBorraCaja">Delete box</a>
             </div>
 	    <div class="espacio"></div>
 
 	    {% if not pedido %} 
 	    <div id="paneCartA">
 	      <ul>
-	        <li><a href="#" class="selected" caja="1">Caja #1</a></li>
+	        <li><a href="#" class="selected" caja="1">Box #1</a></li>
 	      </ul>
 	    </div>
 	    <div id="paneCartB">
@@ -209,27 +208,26 @@
 	    <div class="clear"></div>
 	    
 	    <div id="panePrice">
-              Total de tu compra: $ <strong>
+              Total order: $ <strong>
 	     {% if pedido %}
              {{ pedido.costo_de_productos }}
              {% else %}
                   0.00
              {% endif %}
                   </strong><br />
-	      + gastos de env&iacute;o (pr&oacute;ximo paso)
+	      + shipping costs (next step)
 	    </div>
 	    <div class="clear"></div>
 	  </div>
 	  <div class="clear"></div>
 	  
-	  <button type="button" id="siguiente">Siguiente</button>
+	  <button type="button" id="siguiente">Next</button>
 	  <div class="clear"></div>
 	</form>
       </div>
     </div>
     <div id="footer">
-      <p>&copy; {{ date|date:"Y" }} Todos los derechos reservados | El Nazareno - F&aacute;brica
-	Familiar de Alfajores y Especialidades</p>
+      <p>&copy; {{ date|date:"Y" }} All rights reserved | Alfajor - Machinalis - www.machinalis.com </p>
     </div>
   </body>
 </html>

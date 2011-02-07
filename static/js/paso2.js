@@ -154,7 +154,7 @@ $(document).ready(
         if (envio == 1) {
           $("form").submit();
         } else {
-          alert("Se deben completar todos los campos marcados con (*)");
+          alert("Fields with (*) are mandatory");
         }
       }
     );

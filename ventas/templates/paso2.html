@@ -3,7 +3,7 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title>Alfajores El Nazareno</title>
+    <title>Alfajor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
     <link rel="stylesheet" href="/static/style/layout.css" type="text/css" />
@@ -28,22 +28,22 @@
   </head>
   <body>
     <div id="header">
-      <a id="logo" href="{% url ventas.views.pedido %}">El Nazareno</a>
+      <a id="logo" href="{% url ventas.views.pedido %}">Alfajor</a>
       <img src="/static/img/paso2.gif" />
       <div class="clear"></div>
     </div>
     <div id="body">
       <div id="app">
 	<div id="paneDatos">
-	  <h1>Datos de env&iacute;o</h1>
-	  <p>Los campos marcados con un (*) son obligatorios. </p>
+	  <h1>Recipient information</h1>
+	  <p>Fields with (*) are mandatory. </p>
 	  
           <form method="post" action="{% url ventas.views.datos_de_envio %}">
             {% csrf_token %}
 	    <fieldset>             
               {{ form.nombre_completo.errors }}              
               <div class="fieldWrapper">    
-                <label for="id_nombre_completo">Nombre Completo *</label> 
+                <label for="id_nombre_completo">Name *</label> 
                 {{ form.nombre_completo }}
               </div>
               <div class="espacioMediano"></div>
@@ -58,43 +58,43 @@
               {{ form.telefono.errors }} 
               {{ form.codigo_de_area.errors }}
               <div class="fieldWrapper">
-                <label for="id_telefono">Cód. Área - Teléfono *</label>
+                <label for="id_telefono">Phone *</label>
                 {{ form.codigo_de_area }} - {{ form.telefono }} 
               </div>
               <div class="espacioMediano"></div>            
               
               {{ form.direccion.errors }}
               <div class="fieldWrapper">
-                <label for="id_direccion">Dirección *</label> 
+                <label for="id_direccion">Address *</label> 
                 {{ form.direccion }}
               </div>             
               <div class="espacioMediano"></div>
               
               {{ form.codigo_postal.errors }}
               <div class="fieldWrapper">
-                <label for="id_codigo_postal">Código Postal *</label> 
+                <label for="id_codigo_postal">Zip Code *</label> 
                 {{ form.codigo_postal }}
               </div>
               <div class="espacioMediano"></div>
 
               {{ form.provincia.errors }}
               <div class="fieldWrapper">
-                <label for="id_provincia">Provincia *</label> 
+                <label for="id_provincia">State *</label> 
                 {{ form.provincia }}
               </div>
               <div class="espacioMediano"></div>
 
               {{ form.localidad.errors }}
               <div class="fieldWrapper">
-                <label for="id_localidad">Localidad *</label> 
+                <label for="id_localidad">City *</label> 
                 {{ form.localidad }}
               </div>
               <div class="espacioMediano"></div>             
 	      <div class="clear"></div>
               
 	      <ul id="resumen">
-		<li id="id_costo_pedido" >Pedido: <b>$ <span class="val">{{ pedido.costo_de_productos|decimalfmt }}</span></b></li>
-		<li id="id_costo_de_envio">Costo de envio: <b>$ <span class="val">0.00</span></b></li>
+		<li id="id_costo_pedido" >Order: <b>$ <span class="val">{{ pedido.costo_de_productos|decimalfmt }}</span></b></li>
+		<li id="id_costo_de_envio">Shipping costs: <b>$ <span class="val">0.00</span></b></li>
 		<li id="id_costo_total" class="total">TOTAL: <b>$ 
                     {% if pedido.gastos_de_envio %}
                     <span class="val">{{ pedido.costo_total }}</span>
@@ -106,7 +106,7 @@
 	      <div class="espacioMediano"></div>
 	      
 	      <button style="margin-right: 40px;" id="siguiente" type="button">
-                Siguiente
+                Next
               </button>
 	      <div class="clear"></div>
 	    </fieldset>
@@ -114,25 +114,21 @@
 
 	</div>
 	<div id="paneInfo">
-	  <p>Ingrese los datos de envío para este pedido. Esta información es la
-            que se proveerá al correo para el correcto envío del producto. La
-            dirección de correo electrónico será usada para comunicarnos con 
-            usted en referencia a este pedido. Verifique por favor que los 
-            datos sean correctos</p>
-          <p>En el siguiente paso podrá verificar y confirmar su pedido. Ante
-            cualquier sugerencia por favor envíenos un mail a
-            <a href="mailto:to@example.com"> 
-              to@example.com
-            </a>
-           </p>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Quisque porta felis a ante ullamcorper sit amet accumsan enim 
+      commodo. Sed sit amet ligula augue, at cursus erat. Sed 
+      sollicitudin adipiscing urna ut dignissim. In fermentum ornare 
+      risus, non posuere ante volutpat at. </p>
+      <p>Aliquam et risus sed metus semper pharetra. Morbi eget leo 
+      semper nisi lobortis consectetur. Suspendisse non diam condimentum
+       velit sollicitudin ultricies, 
+       <a href="mailto:to@example.com"> to@example.com</a>.</p>
 	</div>
 	<div class="clear"></div>
       </div>
     </div>
     <div id="footer">
-      <p>&copy; {{ date|date:"Y" }} Todos los derechos reservados | 
-        El Nazareno - F&aacute;brica
-	Familiar de Alfajores y Especialidades</p>
+      <p>&copy; {{ date|date:"Y" }} All rights reserved | Alfajor - Machinalis - www.machinalis.com </p>
     </div>
   </body>
 </html>

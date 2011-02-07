@@ -75,7 +75,7 @@ $(document).ready(function(){
 
 		caja='<input type="hidden" name="cajas[]" class="cajas" caja="'+idCaja+'" tipo="" value="" activa="0">';
 		ul='<ul id="detalleCaja_'+idCaja+'"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><div class="clear"></div></ul>';
-		a='<li><a href="#" caja="'+idCaja+'">Caja #'+idCaja+'</a></li>';
+		a='<li><a href="#" caja="'+idCaja+'">Box #'+idCaja+'</a></li>';
 
 		$(".cajas:last").after(caja);
 		$("#paneCartB ul:last").after(ul);
@@ -99,7 +99,7 @@ $(document).ready(function(){
 
 		$('.cajas[caja="'+idCajaActiva+'"]').clone().attr("caja",idCaja).appendTo("form");
 		$("#detalleCaja_"+idCajaActiva).clone().attr("id","detalleCaja_"+idCaja).appendTo("#paneCartB");
-		$("#paneCartA ul li:last").after('<li><a href="#" caja="'+idCaja+'">Caja #'+idCaja+'</a></li>');
+		$("#paneCartA ul li:last").after('<li><a href="#" caja="'+idCaja+'">Box #'+idCaja+'</a></li>');
 
 		$("#paneCartA ul li a").unbind().click(function(){
 			activarCaja($(this).attr("caja"));
@@ -113,7 +113,7 @@ $(document).ready(function(){
 
 	$("#accBorraCaja").click(function(){
 		if($(".cajas").size()>1){
-			if(confirm("Seguro que desea borrar la caja?")){
+			if(confirm("About to delete a box. Are you sure?")){
 				idCajaActiva=cajaActiva();
 				$('.cajas[caja="'+idCajaActiva+'"], #detalleCaja_'+idCajaActiva).remove();
 				$('#paneCartA ul li a[caja="'+idCajaActiva+'"]').parent().remove();
@@ -121,7 +121,7 @@ $(document).ready(function(){
 				activarCaja($(".cajas:first").attr("caja"));
 			}
 		}else{
-			alert("No es posible borrar esta caja, ya que al menos debe quedar una activa.");
+			alert("I can not delete this box. At least one should be active.");
 		}
 		return false;
 	});
@@ -135,7 +135,7 @@ $(document).ready(function(){
 		if(todoOk()){
 			$("form").submit();
 		}else{
-			alert("Las cajas deben contener 6 o 12 unidades. Por favor revise su pedido.");
+			alert("Boxes should contain 6 or 12 items. Please, check your order");
 		}
 	});
 });
@@ -196,7 +196,7 @@ function agregarItems(cant){
 	if(unidadesEnCaja<12){
 		if((unidadesEnCaja+cant)>12) agregar=(12-unidadesEnCaja);
 	}else{
-		alert("Esta caja ya esta completa.");
+		alert("This box is full.");
 		agregar=0;
 	}
 
@@ -210,7 +210,7 @@ function agregarItems(cant){
 			}
 			organizar();
 		}else{
-			alert("Las cajas deben contener productos del mismo tipo.");
+			alert("Items in a box should be of the same type.");
 		}
 	}
 }

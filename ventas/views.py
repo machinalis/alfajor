@@ -170,34 +170,33 @@ def confirmacion(request):
         datos_de_envio = pedido_inst.datos_de_envio
 
         # Message for owner
-        body = (u"Pedido Número: %d\nA: %s\n"
-                u"Productos:\n %s\nCosto de los Productos:%.2f\n"
-                u"Costo del Envio:%.2f") % (pedido_inst.pk,
+        body = (u"Order id: %d\nA: %s\n"
+                u"Items:\n %s\nItems cost: %.2f\n"
+                u"Shipping cost: %.2f") % (pedido_inst.pk,
                                             datos_de_envio,
                                             cajas,
                                             pedido_inst.costo_de_productos(),
                                             pedido_inst.costo_de_envio())
-        subject = u"[Pedido Número %d]" % pedido_inst.pk
+        subject = u"[Order id %d]" % pedido_inst.pk
         sender = pedido_inst.datos_de_envio.email
         recipients = getattr(settings, 'EMAIL_ADDR_ALFAJOR', '')
 
         elnaza_msg = EmailMessage(subject, body, sender, (recipients,))
 
         # Message for customer
-        client_msg_body = (u"Gracias por realizar su pedido de Alfajores"
-                           u" El Nazareno.\n\nEl detalle del pedido es el"
-                           u" siguiente:\n%s\n\nEl pedido se enviará a la"
-                           u" siguiente dirección:\n%s\n\nCosto de los"
-                           u" Productos: %.2f\nCosto del Envío: %2.f\n\n"
-                           u"Total a pagar: %2.f\n\nNo dude en contactarse"
-                           u" con nosotros ante cualquier eventualidad"
-                           u" respondiendo este mail.\n\nAlfajores El"
-                           u" Nazareno") % (cajas, datos_de_envio,
+        client_msg_body = (u"Thanks for your order. \n\n"
+                           u"Order details follow: \n%s\n\n"
+                           u"The order will be shipped to the following"
+                           u" address: \n%s\n\n"
+                           u"Items cost: %.2f\n"
+                           u"Shipping cost: %2.f\n\n"
+                           u"Total: %2.f\n\n"
+                           u"Don't hesitate about contacting us.\n\n"
+                           u"Alfajor") % (cajas, datos_de_envio,
                                             pedido_inst.costo_de_productos(),
                                             pedido_inst.costo_de_envio(),
                                             pedido_inst.costo_total(),)
-        client_subject = (u"Su pedido de Alfajores El Nazareno ha"
-                          u" sido confirmado")
+        client_subject = (u"Your Alfajor order has been confirmed!")
         client_msg_recipients = (pedido_inst.datos_de_envio.email,)
         client_msg_sender = getattr(settings, 'EMAIL_ADDR_ALFAJOR', '')
 

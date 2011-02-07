@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title>Alfajores El Nazareno</title>
+    <title>Alfajor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
     <link rel="stylesheet" href="/static/style/layout.css" type="text/css" />
@@ -14,23 +14,22 @@
   </head>
   <body>
     <div id="header">
-      <a id="logo" href="{% url ventas.views.pedido %}">El Nazareno</a>
+      <a id="logo" href="{% url ventas.views.pedido %}">Alfajor</a>
       <img src="/static/img/paso3.gif" />
       <div class="clear"></div>
     </div>
     <div id="body">
       <div id="app">
 	<div id="paneDatos">
-	  <h1>Confirmaci&oacute;n de datos</h1>
-	  <p>Por favor compruebe que todos los datos son correctos antes de finalizar el proceso
-	    de compra.</p>
+	  <h1>Data confirmation</h1>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 	  <div class="espacio"></div>
 	  
 	  <div id="listaCajas">
 	    <ul>
               {% for caja in pedido.cajas.all %}
 	      <li>
-		Caja #{{ forloop.counter }}
+		Box #{{ forloop.counter }}
                 {% show_productos caja %}
               </li>
               {% endfor %}
@@ -40,29 +39,28 @@
 	  <div id="listaDatos">
             {% show_datos_de_envio pedido %}   
 	    <div id="precioFinal">
-	      Total a pagar $ <b> {{ pedido.costo_total|decimalfmt }} </b>
+	      Total $ <b> {{ pedido.costo_total|decimalfmt }} </b>
 	    </div>
 	  </div>
 	  <div class="clear"></div>
 	  <form method="post" action="{% url ventas.views.confirmacion %}">
             {% csrf_token %}
-	    <button type="submit" id="siguiente">Finalizar</button>
+	    <button type="submit" id="siguiente">Finish</button>
           </form>
 	  <div class="clear"></div>
 	</div>
 	<div id="paneInfo">
-	  <p>Por favor compruebe que todos los datos sean correctos antes de
-            finalizar el proceso de compra. Nos comunicaremos con usted a la
-            brevedad ante cualquier eventualidad</p>
-	  <p>Recuerde que el Total a pagar incluye los gastos de envío. Presione
-            finalizar para comenzar el proceso de envío</p>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Quisque porta felis a ante ullamcorper sit amet accumsan enim 
+      commodo. Sed sit amet ligula augue, at cursus erat. </p>
+	  <p>Sed sollicitudin adipiscing urna ut dignissim. In fermentum 
+      ornare risus, non posuere ante volutpat at. </p>
 	</div>
 	<div class="clear"></div>
       </div>
     </div>
     <div id="footer">
-      <p>&copy; {{ date|date:"Y" }} Todos los derechos reservados | El Nazareno - F&aacute;brica
-	Familiar de Alfajores y Especialidades</p>
+      <p>&copy; {{ date|date:"Y" }} All rights reserved | Alfajor - Machinalis - www.machinalis.com </p>
     </div>
   </body>
 </html>
