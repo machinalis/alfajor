@@ -3,12 +3,12 @@
         "pk": 1, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0461.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
             "precio_por_unidad": "3.5", 
-            "variedad": "hojaldre", 
-            "descripcion": "Masa de hojaldre alem\u00e1n, relleno con dulce de leche casero.", 
-            "imagen_thumbnail": "productos/thumbnail_0461.jpg", 
+            "variedad": "Alfajor 1", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -16,12 +16,12 @@
         "pk": 2, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0468.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "2.5", 
-            "variedad": "hojaldre ba\u00f1ado en chocolate", 
-            "descripcion": "Masa de hojaldre relleno con dulce de leche casero y ba\u00f1ado en chocolate.", 
-            "imagen_thumbnail": "productos/thumbnail_0468.jpg", 
+            "precio_por_unidad": "3.5", 
+            "variedad": "Alfajor 2", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -32,9 +32,9 @@
             "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
             "precio_por_unidad": "3.75", 
-            "variedad": "Chocolate y frambuesa", 
-            "descripcion": "Masa de manteca, miel y chocolate con dulce casero de frambuesas, ba\u00f1ado en chocolate", 
-            "imagen_thumbnail": "productos/thumbnail_0435_3.jpg", 
+            "variedad": "Alfajor 3", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -42,11 +42,11 @@
         "pk": 4, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0435_2.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "3.75", 
-            "variedad": "chocolate y frutilla", 
-            "descripcion": "Masa de manteca, miel y chocolate con dulce casero de frutillas, ba\u00f1ado en chocolate", 
+            "precio_por_unidad": "4.5", 
+            "variedad": "Alfajor 4", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
             "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
@@ -55,12 +55,12 @@
         "pk": 5, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0435_3.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "0", 
-            "variedad": "chocolate y naranja", 
-            "descripcion": "Masa de manteca, miel y chocolate con dulce de naranjas casero, ba\u00f1ado en chocolate", 
-            "imagen_thumbnail": "productos/thumbnail_0435_2.jpg", 
+            "precio_por_unidad": "4.5", 
+            "variedad": "Alfajor 5", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -68,12 +68,12 @@
         "pk": 6, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0383_1.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "0", 
-            "variedad": "tradicional de chocolate", 
-            "descripcion": "Masa de manteca, miel y chocolate con dulce de leche casero, ba\u00f1ado en chocolate", 
-            "imagen_thumbnail": "productos/thumbnail_0383_1.jpg", 
+            "precio_por_unidad": "4.0", 
+            "variedad": "Alfajor 6", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -81,12 +81,12 @@
         "pk": 7, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0483.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "0", 
-            "variedad": "tradicional de leche", 
-            "descripcion": "Masa de manteca y miel con dulce de leche casero", 
-            "imagen_thumbnail": "productos/thumbnail_0483_1.jpg", 
+            "precio_por_unidad": "4.25", 
+            "variedad": "Alfajor 7", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -94,12 +94,12 @@
         "pk": 8, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0449_1.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "0", 
-            "variedad": "tradicional de membrillo", 
-            "descripcion": "Masa de manteca y miel con dulce de membrillos casero", 
-            "imagen_thumbnail": "productos/thumbnail_0449_1.jpg", 
+            "precio_por_unidad": "4.5", 
+            "variedad": "Alfajor 8", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -107,12 +107,12 @@
         "pk": 9, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0449.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "0", 
-            "variedad": "tradicional de higo", 
-            "descripcion": "Masa de manteca y miel con dulce de higos casero", 
-            "imagen_thumbnail": "productos/thumbnail_0449.jpg", 
+            "precio_por_unidad": "3.5", 
+            "variedad": "Alfajor 9", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -120,12 +120,12 @@
         "pk": 10, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0600_1.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Bombon", 
-            "precio_por_unidad": "0", 
-            "variedad": "nuez", 
-            "descripcion": "Interior de masas finas molidas con dulce de leche casero y nueces tostadas, con ba\u00f1o de chocolate", 
-            "imagen_thumbnail": "productos/thumbnail_0600_1.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 1", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -133,12 +133,12 @@
         "pk": 11, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0622_1.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Bombon", 
-            "precio_por_unidad": "0", 
-            "variedad": "pasas de uva", 
-            "descripcion": "Interior de masas finas molidas con licor de fresa y pasas de uva, con ba\u00f1o de chocolate", 
-            "imagen_thumbnail": "productos/small_0622.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 2", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -146,12 +146,12 @@
         "pk": 12, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/big_0626.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Bombon", 
-            "precio_por_unidad": "0", 
-            "variedad": "coco", 
-            "descripcion": "Interior de masas finas molidas con dulce de leche casero, chocolate blanco y coco, con ba\u00f1o de chocolate", 
-            "imagen_thumbnail": "productos/0626_1.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 3", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -159,12 +159,12 @@
         "pk": 13, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0600.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Bombon", 
-            "precio_por_unidad": "0", 
-            "variedad": "almendra", 
-            "descripcion": "Chocolate con leche macizo con almendras enteras tostadas", 
-            "imagen_thumbnail": "productos/thumbnail_0600.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 4", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -172,12 +172,12 @@
         "pk": 14, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0607.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Bombon", 
-            "precio_por_unidad": "0", 
-            "variedad": "mantecol", 
-            "descripcion": "Chocolate con leche macizo con trozos del m\u00e1s rico mantecol", 
-            "imagen_thumbnail": "productos/thumbnail_0607.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 5", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -185,12 +185,12 @@
         "pk": 15, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0617_5.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Bombon", 
-            "precio_por_unidad": "0", 
-            "variedad": "uvas al ron", 
-            "descripcion": "Chocolate semi amargo con uvas maceradas en ron", 
-            "imagen_thumbnail": "productos/small_0617_1.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 6", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -198,12 +198,12 @@
         "pk": 16, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0617_4.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Bombon", 
-            "precio_por_unidad": "0", 
-            "variedad": "ciruela", 
-            "descripcion": "Chocolate blanco con trozos de ciruelas secas", 
-            "imagen_thumbnail": "productos/small_0617.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 7", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -211,12 +211,12 @@
         "pk": 17, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0412.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "3.45", 
-            "variedad": "Colaci\u00f3n", 
-            "descripcion": "Masa seca de yema de huevo con dulce de leche casero cubierta de fondant", 
-            "imagen_thumbnail": "productos/thumbnail_0412.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 8", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }, 
@@ -224,12 +224,12 @@
         "pk": 18, 
         "model": "ventas.producto", 
         "fields": {
-            "imagen": "productos/0653.jpg", 
+            "imagen": "productos/0435.jpg", 
             "tipo": "Alfajor", 
-            "precio_por_unidad": "3.5", 
-            "variedad": "Pino de dulce de leche", 
-            "descripcion": "Masa de manteca y miel, dulce de leche casero y ba\u00f1o de chocolate.", 
-            "imagen_thumbnail": "productos/thumbnail_0653.jpg", 
+            "precio_por_unidad": "2.5", 
+            "variedad": "Chocolate 9", 
+            "descripcion": "Fusce eget justo id purus varius porta ornare in metus. Nulla accumsan, diam quis luctus mollis, libero nisi blandit neque, nec dignissim urna tellus in ligula.", 
+            "imagen_thumbnail": "productos/thumbnail_0435.jpg", 
             "disponible": true
         }
     }
