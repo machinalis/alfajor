@@ -12,7 +12,9 @@ After confirmation a mail is sent to the sellers to set up the order.
 
 Notice that users don't need to login.
 
-This include django project and django app. You can load some products loading the fixtures.
+This include django project and django app. You can load some products loading the fixtures. For a standard behaviour at least a product and a non-city shipping point ("Gasto de envío") must be loaded.
 
+Please, change EMAIL_HOST and EMAIL_PORT according to your mail server's information.
 
-
+Remember you can run a dummy mail server with
+$ python -m smtpd -n -c DebuggingServer host:port

@@ -99,7 +99,17 @@ INSTALLED_APPS = (
     'ventas',
 )
 
+# mail settings
+
+# the email address to recieve product orders description and confirmations
 EMAIL_ADDR_ALFAJOR = "to@example.com"
+
+# change this according to your mail server's information
+EMAIL_HOST = "localhost"
+EMAIL_PORT = "1025"
+
+# you can run a dummy mail server with
+# python -m smtpd -n -c DebuggingServer host:port
 
 try:
     from local_settings import *
