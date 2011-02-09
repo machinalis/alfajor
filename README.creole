@@ -1,8 +1,8 @@
 == Alfajor ==
 
-This is a "shopping cart" to sell [[http://en.wikipedia.org/wiki/Alfajorhttp://en.wikipedia.org/wiki/Alfajor|Alfajores]]  (check variations in the Americas) and other chocolate pastry.
+This is a "shopping cart" to sell [[http://en.wikipedia.org/wiki/Alfajor|Alfajores]]  (check variations in the Americas) and other chocolate pastry.
 
-The application is divided in 3 screen:
+The application is divided in 3 screens:
 
  * In the first screen the user creates boxes of 6 or 12 items he wants to buy. One can create as many boxes as one likes, but the amount of alfajores is either 6 or 12.
  * In the second screen the user fills out mail and contact information (where the products are going to be shipped)
@@ -12,7 +12,7 @@ After confirmation a mail is sent to the sellers to set up the order.
 
 Notice that users don't need to login.
 
-This include django project and django app. You can load some products loading the fixtures:
+This includes django project and django app. You can load some products loading the fixtures:
     python manage.py loaddata ventas/fixtures/productos.json
     python manage.py loaddata ventas/fixtures/gastosdeenvio.json
 

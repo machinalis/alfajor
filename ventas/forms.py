@@ -8,7 +8,7 @@ from ventas.models import DatosDeEnvio, GastosDeEnvio, ARP
 
 
 class DumbSelect(forms.Select):
-    EMPTY_CHOICES = [('Otra', 'Otra'),]
+    EMPTY_CHOICES = [('Otra', 'Other'),]
 
     def __init__(self, attrs=None, choices=None):
         if choices:

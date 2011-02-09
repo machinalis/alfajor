@@ -9,7 +9,7 @@ ARP = dict(ar_provinces.PROVINCE_CHOICES)
 
 class Producto(models.Model):
     CHOICES = (('Alfajor', 'Alfajor'),
-               ('Bombon', 'Bombon'),)
+               ('Bombon', 'Chocolate'),)
 
     tipo = models.CharField(choices=CHOICES, max_length=10)
     variedad = models.CharField(max_length=256)
